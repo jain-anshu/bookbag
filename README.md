@@ -22,4 +22,3 @@ Things you may want to cover:
 - Deployment instructions
 
 - ...
-  > > > > > > > 8002aeb (Adds a demo rep with devise integration)
