@@ -3,7 +3,11 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
   # GET /books or /books.json
   def index
-    @books = Book.all
+    Rails.cache.write("books", Book.all)
+
+    @books ||= Rails.cache.read("books") 
+    #render json: @books 
+    #@books = Book.all
   end
 
   # GET /books/1 or /books/1.json
